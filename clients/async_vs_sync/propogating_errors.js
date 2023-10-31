@@ -11,9 +11,7 @@ const asyncFunction = async (x, y, z) => {
 
 }
 
-const syncFunction = (x, y, z) => {
-  return promiseMultiply(x,y).then( result => result / z )
-}
+const syncFunction = (x, y, z) => promiseMultiply(x,y).then( result => result / z )
 
 const synchronousResults = await syncFunction(4, 5, 2).catch(error => {
   console.error(error)
